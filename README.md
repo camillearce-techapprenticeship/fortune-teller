@@ -1,4 +1,4 @@
-# Fortune Teller
+# Fortune Teller - Camille Arce
 
 ## Setup
 
@@ -12,6 +12,7 @@
 Here is your target:
 
 [https://fortune-teller.matchthetarget.com](https://fortune-teller.matchthetarget.com)
+
 
 ## First task: study `/lottery/lucky`
 
