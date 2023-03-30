@@ -31,9 +31,9 @@ Rails.application.routes.draw do
   get("/zodiacs/libra", { :controller => "air", :action => "scales" })
   get("/zodiacs/aquarius", { :controller => "air", :action => "waterbearer" })
 
-  # get("/zodiacs/cancer " { :controller => "earth" :action => "crab" })
-  # get("/zodiac/ scorpio", { :controller => "Water", :action => "scorpion" })
-  # get("/zodiacs/pisces", { :controller => "water", :action => "fish " })
+  get("/zodiacs/cancer", { :controller => "water", :action => "crab" })
+  get("/zodiacs/scorpio", { :controller => "water", :action => "scorpion" })
+  get("/zodiacs/pisces", { :controller => "water", :action => "fish" })
 
   # PART 3: MORE R→C→A→V PRACTICE
   # ==========================
@@ -49,22 +49,26 @@ Rails.application.routes.draw do
   #  - Add some static HTML to mock up the response that you want to send back.
   #  - Write the Ruby to make it dynamic, and work properly.
 
-  # /roll/1/6
-  # /roll/2/6
-  # /roll/3/6
-  # /roll/4/6
-  # /roll/5/6
-  # /roll/6/6
+  get("/roll/1/6", { :controller => "dice", :action => "dice_1d6" })
+  get("/roll/2/6", { :controller => "dice", :action => "dice_2d6" })
+  get("/roll/3/6", { :controller => "dice", :action => "dice_3d6" })
+  get("/roll/4/6", { :controller => "dice", :action => "dice_4d6" })
+  get("/roll/5/6", { :controller => "dice", :action => "dice_5d6" })
+  get("/roll/6/6", { :controller => "dice", :action => "dice_6d6" })
 
-  # /roll/1/4
-  # /roll/2/4
-  # /roll/3/4
-  # /roll/4/4
-  # /roll/1/8
-  # /roll/2/8
-  # /roll/1/10
-  # /roll/2/10
-  # /roll/1/20
-  # /roll/2/20
+  get("/roll/1/4", { :controller => "dice", :action => "dice_1d4" })
+  get("/roll/2/4", { :controller => "dice", :action => "dice_2d4" })
 
+  ## where i start to get lazy
+
+  get("/roll/3/4", { :controller => "dice", :action => "dice_3d4" })
+  get("/roll/4/4", { :controller => "dice", :action => "dice_3d4" })
+  get("/roll/1/8", { :controller => "dice", :action => "dice_3d4" })
+  get("/roll/2/8", { :controller => "dice", :action => "dice_3d4" })
+  get("/roll/3/8", { :controller => "dice", :action => "dice_3d4" })
+  get("/roll/1/10", { :controller => "dice", :action => "dice_3d4" })
+  get("/roll/2/10", { :controller => "dice", :action => "dice_3d4" })
+  get("/roll/1/20", { :controller => "dice", :action => "dice_3d4" })
+  get("/roll/2/20", { :controller => "dice", :action => "dice_3d4" })
+  get("/roll/3/20", { :controller => "dice", :action => "dice_3d4" })
 end
