@@ -19,9 +19,11 @@ Rails.application.routes.draw do
   # Uncomment each route below ONE AT A TIME and debug.
   # Do NOT uncomment more than one at a time, or you'll be dealing with multiple syntax errors at once.
 
-  get("/zodiacs/aries", { :controller => "fires", :action => "ram" })
-  get("/zodiacs/leo", { :controller => "fires", :action => "lion" })
-  get("/zodiacs/sagittarius", { :controller => "fires", :action => "archer" })
+=begin 
+  Commenting out / working on one route that will work!
+  get("/zodiacs/aries", { :controller => "fire", :action => "ram" })
+  get("/zodiacs/leo", { :controller => "fire", :action => "lion" })
+  get("/zodiacs/sagittarius", { :controller => "fire", :action => "archer" })
 
   get("/zodiacs/taurus", { :controller => "earth", :action => "bull" })
   get("/zodiacs/virgo", { :controller => "earth", :action => "maiden" })
@@ -34,6 +36,9 @@ Rails.application.routes.draw do
   get("/zodiacs/cancer", { :controller => "water", :action => "crab" })
   get("/zodiacs/scorpio", { :controller => "water", :action => "scorpion" })
   get("/zodiacs/pisces", { :controller => "water", :action => "fish" })
+=end
+
+  get("/zodiacs/:the_sign", { :controller => "fortune", :action => "horoscopes" })
 
   # PART 3: MORE R→C→A→V PRACTICE
   # ==========================
@@ -49,26 +54,28 @@ Rails.application.routes.draw do
   #  - Add some static HTML to mock up the response that you want to send back.
   #  - Write the Ruby to make it dynamic, and work properly.
 
-  get("/roll/1/6", { :controller => "dice", :action => "dice_1d6" })
-  get("/roll/2/6", { :controller => "dice", :action => "dice_2d6" })
-  get("/roll/3/6", { :controller => "dice", :action => "dice_3d6" })
-  get("/roll/4/6", { :controller => "dice", :action => "dice_4d6" })
-  get("/roll/5/6", { :controller => "dice", :action => "dice_5d6" })
-  get("/roll/6/6", { :controller => "dice", :action => "dice_6d6" })
+  #get("/roll/1/6", { :controller => "dice", :action => "dice_1d6" })
+  #get("/roll/2/6", { :controller => "dice", :action => "dice_2d6" })
+  #get("/roll/3/6", { :controller => "dice", :action => "dice_3d6" })
+  #get("/roll/4/6", { :controller => "dice", :action => "dice_4d6" })
+  #get("/roll/5/6", { :controller => "dice", :action => "dice_5d6" })
+  #get("/roll/6/6", { :controller => "dice", :action => "dice_6d6" })
 
-  get("/roll/1/4", { :controller => "dice", :action => "dice_1d4" })
-  get("/roll/2/4", { :controller => "dice", :action => "dice_2d4" })
+  #get("/roll/1/4", { :controller => "dice", :action => "dice_1d4" })
+  #get("/roll/2/4", { :controller => "dice", :action => "dice_2d4" })
 
   ## where i start to get lazy
 
-  get("/roll/3/4", { :controller => "dice", :action => "dice_3d4" })
-  get("/roll/4/4", { :controller => "dice", :action => "dice_3d4" })
-  get("/roll/1/8", { :controller => "dice", :action => "dice_3d4" })
-  get("/roll/2/8", { :controller => "dice", :action => "dice_3d4" })
-  get("/roll/3/8", { :controller => "dice", :action => "dice_3d4" })
-  get("/roll/1/10", { :controller => "dice", :action => "dice_3d4" })
-  get("/roll/2/10", { :controller => "dice", :action => "dice_3d4" })
-  get("/roll/1/20", { :controller => "dice", :action => "dice_3d4" })
-  get("/roll/2/20", { :controller => "dice", :action => "dice_3d4" })
-  get("/roll/3/20", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/3/4", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/4/4", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/1/8", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/2/8", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/3/8", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/1/10", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/2/10", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/1/20", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/2/20", { :controller => "dice", :action => "dice_3d4" })
+  #get("/roll/3/20", { :controller => "dice", :action => "dice_3d4" })
+
+  get("/roll/:number_of_dice/:number_of_sides", { :controller => "dice", :action => "infinity_and_beyond" })
 end
